@@ -1,0 +1,187 @@
+/*
+Paleta de colores 
+    Amarillo: #EAC926;
+     Azul: #03264C; 
+     Celeste: #1259c3; 
+     Gris oscuro: #666; 
+     Gris claro: #ebebeb; 
+     Verde: #39b54a;
+
+Tamaños Tipográficos 
+    Cuerpos de texto: 12px 
+    Titulares (Basado en tu última visita/Ofertas): 24px
+    Precios: 18px 
+    Descuentos: 16px 
+    Descripciones: 16px
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{background-color: #ebebeb;}
+p{
+    font-size: 12px;
+}
+
+h1{
+    font-size: 24px;
+}
+
+.price{
+    font-size: 18px;
+}
+.discount{
+    font-size: 16px;
+    color: #39b54a;
+} 
+.description {
+    font-size: 16px;
+    margin-top:15px;
+    color: #666;
+}
+
+
+/*=======================HEADER=======================================*/
+header{
+    background-color: #EAC926;
+    padding: 5%;
+}
+
+header p{
+    margin: 20px 0px;
+    text-align: center;
+}
+header .logo{
+    width: 50%;
+}
+header ul li {
+    list-style-type: none;
+}
+header ul li a{
+    color:black;
+    text-decoration:none;
+}
+header .fas{
+    color:black;
+}
+
+
+
+div.burger-menu i{
+    width: 40px;
+    height: 40px;
+    background-color: #0349b2;
+    color: white;
+    padding:10px;
+    border-radius: 5px;
+    font-size: 24px;
+    margin: 10px 0px 10px 0px;
+}
+div.burger-menu{
+    text-align: center;
+}
+/*====================================================================*/
+
+/*==========================MAIN=======================================*/
+
+.Home-Banner img{
+    width: 100%;
+}
+
+main{
+    width: 90vw;
+    margin: 0 auto;
+}
+main section h1{
+    margin: 20px 0px;
+    color: #666;
+}
+main section article {
+    background-color: #fff;
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+.product-details i{
+    border-radius: 50%;
+    border: #39b54a solid 1px;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+.product-details .fas{
+   color: #39b54a;
+}
+
+article div.product-details{
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+  }
+ 
+/*===================================================================*/
+/*============================FOOTER==================================*/
+footer article{
+    text-align: center;
+    margin: 30px;
+}
+
+footer i{
+    font-size: 2em;
+}
+.fas{
+    color: #1259c3;
+}
+article h2{
+    font-size: 24px;
+}
+article p{
+    font-size: 16px;
+}
+.copyright{
+    font-size: 16px;
+    margin: 20px;
+}
+/*====================================================================*/
+
+@media (max-width: 412px) {
+    main section article .description {
+        display: none;
+    }
+}
+
+@media (min-width: 413px){
+    main section article .description{
+        display: block;
+    }
+  
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+  
+    main section div.products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    main section div.products article{
+        width:45%;
+    }
+  
+    .price,
+    .discount{
+        width: 50%;
+    }
+  }
+  
+  @media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+  }

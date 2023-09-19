@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+     <title>Registrarse - Mercado Liebre</title>
+</head>
+<body>
+    <header>
+        <div> 
+         <img src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre">
+        </div>
+        <div>
+         <input type="search" placeholder="Buscar productos, marcas"> 
+         </div>
+        <div>
+            Comprá en cuotas y sin tarjeta de crédito
+        </div>
+        <nav>
+         <ul>
+             <li><a href="#">Ofertas</a></li>
+             <li><a href="#">Tiendas Oficiales</a></li>
+             <li><a href="#">Vender</a></li>
+             <li><a href="#">Ayuda</a></li>
+         </ul>
+ 
+         <ul>
+             <li><a href="#">Crea tu cuenta</a></li>
+             <li><a href="#">Ingresá</a></li>
+             <li><a href="#">Mis compras</a></li>
+         </ul>
+        </nav>
+        <div class="burger-menu"> 
+         <i class="fas fa-bars"></i>
+        </div>
+     </header>
+     <main>
+        <form action="/register" method="post">
+            <div>
+                <label for="txtFNameLname">Nombre y apellido:</label>
+                <input type="text" name="firstLastName" id="txtFNameLname" required>
+            </div>
+            <div>
+                <label for="txtUser">Nombre de usuari@:</label>
+                <input type="text" name="user" id="txtUser" required>
+            </div>
+            <div>
+                <label for="dateOfBirth">Fecha Nacimiento:</label>
+                <input type="date" name="dateOfBirth" id="dateOfBirth">
+            </div>
+            <div>
+                <label for="txAddress">Dirección:</label>
+                <input type="text" name="address" id="txAddress">    
+            </div>
+            <div>
+                <label>Perfil de usuario: </label>
+                <div>
+                    <input type="radio" name="userProfile" id="rbBuy"><label for="rbBuy">Comprar</label>               
+                    <input type="radio" name="userProfile" id="rbSell"><label for="rbSell">Vender</label>
+                </div>
+            </div>
+            <div>
+                <label>Categorías de interés:</label>
+                <div>
+                    <input type="checkbox" name="categoriesInt" id="ckbElectro"><label for="ckbElectro">Electro</label>               
+                    <input type="checkbox" name="categoriesInt" id="ckbFashion"><label for="ckbFashion">Moda</label>
+                    <input type="checkbox" name="categoriesInt" id="ckbHome"><label for="ckbHome">Hogar</label>               
+                    <input type="checkbox" name="categoriesInt" id="ckbToyStore"><label for="ckbToyStore">Juguetería</label>
+                    <input type="checkbox" name="categoriesInt" id="ckbHealthyLiving"><label for="ckbHealthyLiving">Vida sana</label>
+                </div>
+            </div>
+            <div>
+                <label for="fileUserPhoto">Foto de Perfil:</label>
+                <input type="file" name="UserPhoto" id="fileUserPhoto" accept="image/*">
+            </div>
+            <div>
+                <label for="password">Contraseña:</label>    
+                <input type="password" name="password" id="password">
+            </div>            
+            <div>                
+                <label for="confPassword">Confirmar contraseña:</label>    
+                <input type="password" name="confpassword" id="confPassword">
+            </div>            
+            <div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </div>            
+        </form>
+     </main>
+</body>
+</html>
