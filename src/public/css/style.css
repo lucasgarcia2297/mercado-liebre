@@ -47,20 +47,23 @@ h1{
 /*=======================HEADER=======================================*/
 header{
     background-color: #EAC926;
+    text-align: center;
     padding: 5%;
 }
 
-header p{
+header p h2{
     margin: 20px 0px;
-    text-align: center;
+    text-align: center; 
+    font-weight: bold;
 }
 header .logo{
-    width: 50%;
+    
+    width: 30%;
 }
 header ul li {
     list-style-type: none;
 }
-header ul li a{
+a{
     color:black;
     text-decoration:none;
 }
@@ -68,20 +71,25 @@ header .fas{
     color:black;
 }
 
-
-
-div.burger-menu i{
-    width: 40px;
-    height: 40px;
-    background-color: #0349b2;
-    color: white;
-    padding:10px;
-    border-radius: 5px;
-    font-size: 24px;
-    margin: 10px 0px 10px 0px;
+.navbar {
+    display: none;
 }
 div.burger-menu{
     text-align: center;
+    margin-top: 14px;
+}
+div.burger-menu button{
+    display: block;
+    width: 40px;
+    height: 36px;
+    margin: auto;
+    border-radius: 8px;
+    background-color: #0349b2;
+}
+div.burger-menu button i {
+    color: white;
+    font-size: 20px;
+    margin-top: 2px;
 }
 /*====================================================================*/
 
@@ -98,6 +106,13 @@ main{
 main section h1{
     margin: 20px 0px;
     color: #666;
+}
+main section div.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 16px;
 }
 main section article {
     background-color: #fff;
@@ -138,50 +153,169 @@ footer i{
     color: #1259c3;
 }
 article h2{
-    font-size: 24px;
-}
-article p{
-    font-size: 16px;
+    font-size: 20px;
 }
 .copyright{
-    font-size: 16px;
+    font-size: 12px;
     margin: 20px;
+    font-weight: bold;
+    text-align: center;
 }
 /*====================================================================*/
 
-@media (max-width: 412px) {
-    main section article .description {
+/*======================MAIN: REGISTER y LOGIN====================================*/
+.conteiner-register, .conteiner-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px 80px 0px;
+}
+form.register, form.login {
+    width: 60%;
+    margin: auto;
+    font-family: "Roboto";
+}
+div.input-field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0px;
+}
+.checkbox-options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 15px
+    
+}
+.checkbox-options .option{
+    display: flex;
+}
+.input-field > label{
+    font-weight: bold;
+}
+
+div.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.buttons button{
+    background-color: #0349b2;
+    color:#ebebeb;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+/*==================================================================*/
+
+/*========================RESPONSIVE===================================*/
+
+/*----------------------Tablet------------------------ */
+@media (min-width: 768px){
+    header{
+        padding: 20px 10px;
+    }
+    .top-header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+    }
+    .search-field{
+        display: flex;
+        margin-left: 8px;
+    }
+    .navbar{
+        display: block; 
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: -10px; 
+    }
+    .navbar ul{
+        display: flex;
+    }
+    .navbar li{
+        margin: 0 10px;
+    }
+    .burger-menu{
         display: none;
+    }
+    .box-product{
+        flex-basis: 48%;
+    }
+    
+    .input-field{
+        height: 40px;
     }
 }
 
-@media (min-width: 413px){
-    main section article .description{
-        display: block;
-    }
-  
-    main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-  
-    main section div.products{
+/*----------------------------------------------------- */
+
+/*----------------------Desktop------------------------ */
+@media (min-width: 1024px){
+    .search-field{
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        margin-left: 8px;
+    }
+    .box-product{
+        flex-basis: 23%;
+    }
+    .navbar{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .descuentos{
+       margin-left: 30px;
+    }
+    .input-field{
+        width: 630px;
+        height: 40px;
     }
     
-    main section div.products article{
-        width:45%;
+    /*---footer-Desktop-----*/
+    .conteiner-info{
+        display: flex;
+        justify-content: space-between;
     }
-  
-    .price,
-    .discount{
-        width: 50%;
+    .info-footer{
+        display: flex;
+        flex-direction: column; 
     }
-  }
-  
-  @media (min-width: 769px){
-    main section div.products article{
-        width: 22%;
+    .copyright{
+        display: flex;
+        align-items: center;
+        margin-top: 43px;
+        justify-content: center;
     }
-  }
+    /*------------------------------------*/
+    /*--------Productos-Desktop---------- */
+   
+    .box-product:hover{
+        box-shadow:  0px 0px 10px rgb(100, 100, 100);
+    }
+    .infoProduct{
+        transition: all 0.4s ease-in;
+    }
+    .description{
+        position: relative;
+        bottom: 40px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.4s ease-in;
+    }
+
+    .box-product:hover .infoProduct{
+        height: 5em;
+    }
+
+    .box-product:hover .description{
+        position: relative;
+        bottom: 0;
+        z-index: 1;
+        opacity: 1;
+    }
+    /*----------------------------------*/
+}
